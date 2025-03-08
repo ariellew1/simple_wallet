@@ -6,7 +6,7 @@ app = App(title='Simple wallet')
 menu_bar = MenuBar(app,
                    toplevel=['Portfel','Transakcje', 'Kategorie', 'Raporty',],
                    options=[
-                       [['Nowy', functions.new_wallet],
+                       [['Nowy', lambda: functions.new_wallet(app)],
                         ['Otwórz', functions.open_wallet],
                         ['Zapisz', functions.save_wallet],],
                        [['Dodaj', functions.add_transaction],
